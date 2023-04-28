@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: hsl(0, 0%, 81%);
+    font-family: "Barlow semi condesed", sans-serif;
+    font-size: 17px;
+  }
+  .testimonials{
+    padding: 4em;
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap:1em;
+  }
+ 
+  .profile-pic{
+    display: flex;
+    gap: 10px;
+  }
+  .testimonials Article img{
+    border-radius: 50%;
+  }
+  .article-1{
+    grid-column: span 2;
+    background-color:hsl(263, 55%, 52%);
+    color: white;
+    background-image:url(../images/bg-pattern-quotation.svg);
+    background-repeat:no-repeat;
+    background-position: top right 10%;
+    background-size: 200px;
+
+  }
+  .article-2{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+  }
+  .article-3{
+   background-color: hsl(0, 0%, 100%);
+  }
+  .article-4{
+  background-color:hsl(219, 29%, 14%);
+  color: white;
+  grid-column: span 2;
+  }
+  .article-5{
+    background-color: hsl(0, 0%, 100%);
+  grid-row:span 2;
+  }
+.article{
+  padding: 2em;
+  border-radius: 2em;
+}
+h2{
+  margin-bottom: 2em;
+}
+/* media-querry */
+@media only screen  and (max-width:1200px){
+.testimonials{
+grid-template-columns:repeat(2,1fr);
+grid-template-rows:repeat(3,1fr);
+}
+}
+
+@media screen  and (max-width: 700px){
+.testimonials{
+  grid-template-columns:1fr;
+  grid-template-rows:repeat (5 ,1fr);
+}
+.article-1{
+  grid-column: span 1;
+}
+.article-5{
+  grid-row: span 1;
+}
+.article-4{
+grid-column:span 1;
+}
+}
